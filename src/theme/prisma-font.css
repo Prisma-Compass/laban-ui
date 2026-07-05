@@ -1,0 +1,107 @@
+/* PRISMA SANS — Brand Typeface Specification
+ * Source: Cẩm nang Thương hiệu PRISMA.md §4.2
+ * 
+ * PRISMA SANS is a geometric, modern sans-serif designed for
+ * pixel-perfect rendering on dark backgrounds with glassmorphic effects.
+ * 
+ * Fallback stack: 'PRISMA SANS', 'Inter', system-ui, -apple-system, sans-serif
+ */
+
+/* H1 — Master Title */
+.prisma-h1 {
+  font-family: 'PRISMA SANS', 'Inter', system-ui, sans-serif;
+  font-weight: 700;
+  font-size: clamp(30px, 5vw, 36px);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: #FFFFFF;
+}
+
+/* H2 — Sub-brand Title */
+.prisma-h2 {
+  font-family: 'PRISMA SANS', 'Inter', system-ui, sans-serif;
+  font-weight: 500;
+  font-size: clamp(20px, 3.5vw, 24px);
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  color: #FFFFFF;
+}
+
+/* H3 — Section Title */
+.prisma-h3 {
+  font-family: 'PRISMA SANS', 'Inter', system-ui, sans-serif;
+  font-weight: 400;
+  font-size: clamp(16px, 2.5vw, 18px);
+  line-height: 1.4;
+  color: #FFFFFF;
+}
+
+/* Body Text */
+.prisma-body {
+  font-family: 'PRISMA SANS', 'Inter', system-ui, sans-serif;
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+/* Label / Caption */
+.prisma-caption {
+  font-family: 'PRISMA SANS', 'Inter', system-ui, sans-serif;
+  font-weight: 300;
+  font-size: 11px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.35);
+}
+
+/* Brand Tagline */
+.prisma-tagline {
+  font-family: 'PRISMA SANS', 'Inter', system-ui, sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  letter-spacing: 0.05em;
+  color: rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+}
+
+/* Numbers / Data */
+.prisma-number {
+  font-family: 'PRISMA SANS', 'Inter', system-ui, sans-serif;
+  font-weight: 700;
+  font-size: clamp(24px, 4vw, 32px);
+  font-variant-numeric: tabular-nums;
+  color: #FFFFFF;
+}
+
+/* @font-face — Self-hosted PRISMA SANS */
+@font-face {
+  font-family: 'PRISMA SANS';
+  src: url('/fonts/PRISMA-SANS-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PRISMA SANS';
+  src: url('/fonts/PRISMA-SANS-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PRISMA SANS';
+  src: url('/fonts/PRISMA-SANS-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PRISMA SANS';
+  src: url('/fonts/PRISMA-SANS-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
