@@ -36,3 +36,17 @@ coverage/
 # Misc
 .cache/
 .turbo/
+
+*.pem
+
+*.key
+
+*.crt
+
+*.pfx
+
+credentials*
+
+secrets*
+
+data/jobads_live/
