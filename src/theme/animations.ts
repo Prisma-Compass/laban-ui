@@ -1,6 +1,16 @@
 // @laban/ui — Glassmorphism + Lens Shutter animations
 
-import { keyframes } from 'framer-motion';
+/* eslint-disable @typescript-eslint/no-require-imports */
+declare var require: (module: string) => any;
+
+let keyframes: any;
+
+try {
+  keyframes = require('framer-motion').keyframes;
+} catch {
+  console.warn('[laban-ui:animations] framer-motion not available — animations will be no-ops');
+  keyframes = (..._args: any[]) => ({});
+}
 
 // Lens Shutter — aperture open/close
 export const shutterOpen = keyframes`
