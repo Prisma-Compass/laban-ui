@@ -5,3 +5,4 @@ export {
   rainbowShimmer, lightBeam, prismReveal,
   glassHover, guardianPulse, phoenixFlicker,
 } from './theme/animations';
+export { default as ErrorBoundary } from './components/ErrorBoundary';

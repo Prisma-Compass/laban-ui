@@ -2,6 +2,7 @@
 // Source: Cẩm nang Thương hiệu PRISMA.md §5.1
 
 import React, { useEffect, useState } from 'react';
+import PropTypes from 'prop-types';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const PHASES = {
@@ -12,6 +13,7 @@ const PHASES = {
 };
 
 export default function SplashScreen({ onComplete, duration = 5000 }) {
+  SplashScreen.displayName = 'SplashScreen';
   const [phase, setPhase] = useState(PHASES.BEAM);
 
   useEffect(() => {
@@ -20,7 +22,11 @@ export default function SplashScreen({ onComplete, duration = 5000 }) {
       setTimeout(() => setPhase(PHASES.REVEAL), duration * 0.6),
       setTimeout(() => {
         setPhase(PHASES.DONE);
-        onComplete?.();
+        try {
+          onComplete?.();
+        } catch (e) {
+          console.error('SplashScreen onComplete failed:', e);
+        }
       }, duration),
     ];
     return () => timers.forEach(clearTimeout);
@@ -159,3 +165,12 @@ export default function SplashScreen({ onComplete, duration = 5000 }) {
     </AnimatePresence>
   );
 }
+
+SplashScreen.propTypes = {
+  onComplete: PropTypes.func,
+  duration: PropTypes.number,
+};
+
+SplashScreen.defaultProps = {
+  duration: 5000,
+};
